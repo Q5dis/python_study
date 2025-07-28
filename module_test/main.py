@@ -31,7 +31,7 @@ print("최소공배수",math.lcm(10,20))
 
 # 랜덤모듈
 import random
-print("랜덤모듈-------")
+print("\n랜덤모듈-------")
 # seed(a) 최초 생성 난수 고정 시 사용
 random.seed(40)
 
@@ -61,3 +61,35 @@ print("원본 리스트:",fruit)
 random.shuffle(fruit)
 print("변경된 리스트:",fruit)
 
+
+
+# datetime 모듈: 날짜 시간 생성 조작 현실변환 같은 시간관련 기능 제공
+
+import datetime as d
+print("\ndatetime 모듈----")
+print("날짜와 시간",d.datetime.now())
+now=d.datetime.now()
+print("오늘 날짜만",d.date.today())
+today=d.date.today()
+# 날짜와 시간의 형변환
+formatted=now.strftime("%Y/%m/%d %H:%M:%S") # 연 월 일 시 분 초 
+print(formatted)
+
+
+parsed=d.datetime.strptime(formatted, "%Y/%m/%d %H:%M:%S") # 포맷 풀기
+print(type(parsed))
+
+#날짜 시간 연산
+dt= d.date(2025,7,7)
+passed=today-dt
+print(f"현재 개강일부터 {passed.days}일 경과")
+
+# 요일반환
+print(today.weekday()) # 0월~7일요일
+weeks=["월","화","수","목","금","토","일"]
+print(f"오늘은 {weeks[today.weekday()]}요일")
+
+# 캘린더 모듈
+import calendar
+print("캘린더 출력")
+print(calendar.prmonth(8001,4))
