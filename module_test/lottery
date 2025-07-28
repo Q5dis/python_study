@@ -1,0 +1,8 @@
+import random as r
+
+lottery=[]
+
+for i in range(6):
+    lottery.append(r.randint(1,45))
+
+print(f"로또 번호 결과: {sorted(lottery)}")
