@@ -1,0 +1,10 @@
+nasus
+renekton
+azir
+xerath
+sivir
+
+---지금부터 입력 테스트---
+가나다
+마바사
+랄랄라
